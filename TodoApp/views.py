@@ -61,10 +61,6 @@ def create_page(request):
             return redirect('/')
     return render(request,'create_todo.html',{'form':form})
 
-def delete_page(request,id):
-    form = CreateTodo.objects.get(pk=id).delete()
-    return redirect("/")
-
 
 
 # Create your views here.
