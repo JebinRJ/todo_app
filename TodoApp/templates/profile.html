@@ -1,0 +1,51 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Profile Page</title>
+     {% endblock title %}
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <br>
+    <br>
+    <br>
+  <form method="post">
+      <div>
+          <label>User Name</label>
+          <br>
+          {{form.name}}
+      </div>
+      <br>
+      <div>
+          <label>Profile Image</label>
+          <br>
+          {{form.image}}
+      </div>
+      <br>
+      <div>
+          <label>Email Address</label>
+          <br>
+          {{form.email}}
+      </div>
+      <br>
+      <div>
+          <label>Bio</label>
+          <br>
+          {{form.bio}}
+      </div>
+      <br>
+      <button type="submit">Submit</button>
+      {% csrf_token %}
+
+
+</form>
+
+</div>
+
+{% endblock content %}
+</body>
+</html>

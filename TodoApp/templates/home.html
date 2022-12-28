@@ -1,0 +1,42 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Home Page</title>
+    {% endblock title %}
+</head>
+<body>
+{% block content %}
+<br>
+<br>
+<br>
+<h1>Home Page</h1>
+<hr class="boreder-primary">
+<div class="container">
+    <table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <br>
+        <th>Todo</th>
+        <br>
+        <th>Status</th>
+    </tr>
+    </thead>
+    {% for item in todos %}
+    <tr>
+
+        <td>{{forloop.counter}}</td>
+        <td>{{item.todo}}</td>
+        <td>{{item.status}}</td>
+        <td><a href="/delete/{{item.id}}" class="btn btn-info">Delete</a></td>
+    </tr>
+     {% endfor %}
+</table>
+</div>
+
+{% endblock content %}
+</body>
+</html>

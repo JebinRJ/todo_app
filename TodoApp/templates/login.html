@@ -1,0 +1,39 @@
+{% extends 'main.html' %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  {% block title %}
+    <title>Login Page</title>
+  {% endblock title %}
+</head>
+<body>
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container">
+   <form method="post">
+    <label>Username</label>
+<input type="text" name="username" required=" ">
+    <br>
+    <br>
+    <br>
+<label>Password</label>
+<input type="password" name="password" required=" ">
+    {% csrf_token %}
+    <br>
+    <br>
+    <br>
+
+<button type="submit">Submit</button>
+</form>
+</div>
+
+
+
+</body>
+{% endblock content %}
+</html>

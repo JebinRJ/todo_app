@@ -1,0 +1,34 @@
+{% extends 'main.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% block title %}
+    <title>Create Page</title>
+     {% endblock title %}
+</head>
+<body>
+{% block content %}
+<div class="container">
+    <br>
+    <br>
+    <br>
+    <form method="post">
+      <div>
+          <label>Create Todo </label>
+          <br>
+          {{form.todo}}
+      </div>
+        <br>
+      <div>
+          <label>Status</label>
+          <br>
+          {{form.status}}
+      </div>
+        <br>
+      <input type="submit">
+      {% csrf_token %}
+    </form>
+</div>
+{% endblock content %}
+</body>
